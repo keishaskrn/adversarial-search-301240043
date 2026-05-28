@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Tic Tac Toe AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎮 Tic Tac Toe AI</h1>
+
+    <div class="controls">
+
+      <div class="control-group">
+
+        <label>AI Mode</label>
+
+        <select id="mode">
+
+          <option value="minimax">
+            Minimax
+          </option>
+
+          <option value="alphabeta">
+            Alpha-Beta
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="control-group">
+
+        <label>Search Depth</label>
+
+        <input
+          type="number"
+          id="depth"
+          min="1"
+          max="9"
+          value="5"
+        >
+
+      </div>
+
+      <button onclick="restartGame()">
+
+        Restart Game
+
+      </button>
+
+    </div>
+
+    <div id="status">
+
+      🎯 Giliran Player X
+
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <div class="info">
+
+      <div class="card">
+
+        <h3>Nodes Evaluated</h3>
+
+        <p id="nodes">0</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>AI Algorithm</h3>
+
+        <p id="currentMode">
+
+          Minimax
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
